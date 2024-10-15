@@ -12,7 +12,7 @@ html {
 }
 
 .notify {
-  width: 40px;
+  width: 38px;
   display: flex;
   max-width: var(
     --calculated-width

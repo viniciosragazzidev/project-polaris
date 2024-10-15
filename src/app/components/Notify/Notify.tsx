@@ -1,11 +1,11 @@
 "use client";
 
-import { NotifyContext } from "@/app/contexts/NotifyContext";
-import { AlertCircle } from "lucide-react";
-import { useEffect, useState, useContext, useRef } from "react";
-import notify_sound from "@/medias/notification.mp3";
-import { play } from "../sound/play";
 import { GlobalContext } from "@/app/contexts/GlobalContext";
+import { NotifyContext } from "@/app/contexts/NotifyContext";
+import notify_sound from "@/medias/notification.mp3";
+import { AlertCircle } from "lucide-react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { play } from "../sound/play";
 
 const Notify: React.FC<{ delay?: number }> = ({ delay = 0 }) => {
   const { message, setMessage } = useContext(NotifyContext);
@@ -47,7 +47,7 @@ const Notify: React.FC<{ delay?: number }> = ({ delay = 0 }) => {
       }, 1000);
 
       showMessageTimeoutRef.current = setTimeout(() => {
-        notifyRef.current?.style.setProperty("width", "40px");
+        notifyRef.current?.style.setProperty("width", "38px");
         setTimeout(() => {
           // adicionar classe fadeOut
           notifyRef.current?.style.setProperty("animation-name", "fadeOut");

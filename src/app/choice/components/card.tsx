@@ -66,7 +66,11 @@ const Card = ({
             <Lock size={44} className="text-primary" />
           </div>
         )}
-        <div className="w-full h-full absolute top-0 left-0 opacity-10">
+        <div
+          className={`w-full h-full absolute top-0 left-0 group-hover:scale-105 transition-transform ${
+            !active ? "opacity-10" : "opacity-60"
+          }`}
+        >
           <Image
             src={image}
             alt="ceu"
@@ -74,7 +78,7 @@ const Card = ({
             layout="fill"
           />
         </div>
-        <div className="flex flex-col group-hover:border-b   group-hover:border-b-primary rounded-b max-md:border-b max-md:border-b-primary justify-center  max-sm:pt-5 items-center w-full h-min min-h-[198px] z-40 gap-3 bgGradienteCard ">
+        <div className="flex flex-col group-hover:border-b   group-hover:border-b-primary rounded-b max-md:border-b max-md:border-b-primary justify-end pb-5  max-sm:pt-5 items-center w-full h-min min-h-[198px] z-40 gap-3 bgGradienteCard ">
           <span className="fade-in delay-3 group-hover:scale-[1.1] transition-transform">
             {IconComponent}
           </span>
